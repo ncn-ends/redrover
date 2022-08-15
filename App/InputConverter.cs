@@ -94,13 +94,13 @@ public class InputConverter
         firstClose = input.IndexOf(")");
         if (firstOpen != -1)
         {
-            var asd = input[(firstOpen + 1)..].IndexOf("(");
-            if (asd != -1) secondOpen = asd + firstOpen + 1;
+            var secondOccurence = input[(firstOpen + 1)..].IndexOf("(");
+            if (secondOccurence != -1) secondOpen = secondOccurence + firstOpen + 1;
         }
         if (firstClose != -1)
         {
-            var asd = input[(firstClose + 1)..].IndexOf(")");
-            if (asd != -1) secondClose = asd + firstClose + 1;
+            var secondOccurence = input[(firstClose + 1)..].IndexOf(")");
+            if (secondOccurence != -1) secondClose = secondOccurence + firstClose + 1;
         }
         
         IEnumerable<int> symbols = new[]
